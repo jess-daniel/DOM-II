@@ -16,15 +16,11 @@ background.addEventListener('keydown', () => {
     background.style.backgroundColor = 'royalblue';
 })
 
-
 // change hero img on double click
 const hero_img = document.querySelector('.intro img');
 hero_img.addEventListener('dblclick', () => {
     hero_img.src = 'http://images5.fanpop.com/image/photos/24800000/Strange-School-Bus-random-24864139-640-480.jpg';
 })
-
-// blur hero img on select
-
 
 // Turn navbar bg yellow on load
 const navbar = document.querySelector('.main-navigation');
@@ -40,13 +36,13 @@ text.forEach((el) => addEventListener('scroll', () => {
 
 // Turn destination bg blue on click
 const destination = document.querySelectorAll('.destination');
-destination.forEach(el => addEventListener('click', () => {
+destination.forEach(el => el.addEventListener('click', () => {
     el.style.background = 'blue';
 }))
 
 // Remove buttons with stopPropagation()
 const buttons = document.querySelectorAll('.destination .btn');
-buttons.forEach((el) => addEventListener('click', (event) => {
+buttons.forEach((el) => el.addEventListener('click', (event) => {
     el.style.background = 'red';
     event.stopPropagation();
 }));
