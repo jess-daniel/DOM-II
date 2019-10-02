@@ -40,10 +40,10 @@ destination.forEach(el => el.addEventListener('click', () => {
     el.style.background = 'blue';
 }))
 
-// Remove buttons with stopPropagation()
+// Remove buttons and use stopPropagation()
 const buttons = document.querySelectorAll('.destination .btn');
 buttons.forEach((el) => el.addEventListener('click', (event) => {
-    el.style.background = 'red';
+    el.remove();
     event.stopPropagation();
 }));
 
